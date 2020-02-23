@@ -1,0 +1,17 @@
+[user]
+	email = shubhamkulkarni01@gmail.com
+	name = Shubham Kulkarni
+[credential]
+	helper = cache --timeout=28800
+        
+[core]
+	editor = vim
+
+[alias]
+       	hist = "!git log | head -n 11"
+        uncache = "rm --cached"
+        ls = "ls-files"
+        s = "status"
+        a = "add -u"
+        c = "commit"
+        amend = "commit --amend"
