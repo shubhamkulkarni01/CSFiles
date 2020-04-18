@@ -7,9 +7,9 @@ syntax on
 
 set smartindent
 set autoindent
-set shiftwidth=2
+set shiftwidth=4
 set expandtab
-set softtabstop=2
+set softtabstop=4
 set nu
 set hidden
 

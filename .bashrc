@@ -130,3 +130,16 @@ fi
 
 # DOCKER DESKTOP (Hyper-V VM)
 export DOCKER_HOST=tcp://localhost:2375
+
+# Set X-SERVER for any GUI apps like pygame
+export DISPLAY=localhost:0.0
+
+
+# Adding powerline to make the terminal display git status
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi

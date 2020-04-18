@@ -17,7 +17,7 @@ alias 'update'='/mnt/c/Users/shubh/Documents/cs/.scripts/update'
 alias 'ucsd'='net && ssh skulkarn@ieng6.ucsd.edu'
 alias 'pi'='net && ssh skulkarn@pi-cluster-027.ucsd.edu'
 
-alias 'll'='ls -Al'
+alias 'll'='ls -Alh'
 
 alias 'g'='git'
 
@@ -29,5 +29,5 @@ alias 'rstudio'='docker run --rm -d --name rstudio -e PASSWORD=password -p 8787:
         http://localhost:8787'
 
 alias 'jupyter'='docker run --rm --name jupyter-scipy-notebook -d -p 8888:8888 \
-              -v /c/Users/shubh/Documents/cs/jupyter:/home/jovyan \
+              -v /c/Users/shubh/Documents/cs/jupyter:/home/jovyan/work \
               jupyter/scipy-notebook;'
