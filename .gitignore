@@ -5,7 +5,5 @@
 !.gitconfig
 !.gitignore
 !.print_time
-!.ssh/id_rsa.pub
-!.ssh/known_hosts
 !.vimrc
 !ngrok
