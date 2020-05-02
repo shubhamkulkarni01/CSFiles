@@ -6,6 +6,8 @@ alias 'java'='/mnt/c/Program\ Files/Java/jdk-11/bin/java.exe'
 alias 'javadoc'='/mnt/c/Program\ Files/Java/jdk-11/bin/javadoc.exe'
 alias 'javac'='/mnt/c/Program\ Files/Java/jdk-11/bin/javac.exe'
 
+alias 'py'='python3.8'
+
 alias 'net'='/mnt/c/Users/shubh/Documents/cs/.scripts/connect_check'
 
 alias 'upload'='/mnt/c/Users/shubh/Documents/cs/.scripts/upload'
