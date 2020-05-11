@@ -1,6 +1,6 @@
 colorscheme desert
 
-set colorcolumn=80
+set colorcolumn=128
 set nocompatible
 set nojoinspaces
 syntax on
