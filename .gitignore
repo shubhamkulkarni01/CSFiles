@@ -1,9 +1,9 @@
-*
+**
 
 !.bash_aliases
 !.bashrc
 !.gitconfig
-!.gitignore
 !.print_time
 !.vimrc
 !ngrok
+! .vim/
