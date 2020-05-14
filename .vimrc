@@ -51,3 +51,5 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 let g:airline_detect_whitespace=0
+let g:airline#extensions#whitespace#enabled = 0
+
