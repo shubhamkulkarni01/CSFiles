@@ -25,6 +25,8 @@ au BufRead,BufNewFile *.s set noexpandtab
 au BufRead,BufNewFile *.s set shiftwidth=8
 au BufRead,BufNewFile *.s set softtabstop=8
 
+au BufRead,BufNewFile *.js.test setfiletype javascript
+
 set formatoptions+=r
 
 nmap ; :
@@ -38,8 +40,8 @@ imap <F10> <Esc>ui
 imap <F11> <Esc>i
 
 " For switching between many opened files by using Ctrl-J or Ctrl-K.
-map <C-J> :bnext <CR>
-map <C-K> :bprev <CR>
+map <C-J> :bprev <CR>
+map <C-K> :bnext <CR>
 
 map <F5> :Explore <CR>
 
