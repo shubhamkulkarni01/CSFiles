@@ -31,8 +31,7 @@ alias 'rstudio'='docker run --rm -d --name rstudio -e PASSWORD=password -p 8787:
         /c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe \
         http://localhost:8787'
 
-alias 'jupyter'='docker start jupyter-scipy-notebook'
-
-alias 'start_jupyter'='docker run --name jupyter-scipy-notebook -d -p 8888:8888 \
+alias 'jupyter'='docker run --rm --name jupyter-scipy-notebook -d -p 8888:8888 \
+              -v jupyter-scipy-notebook:/home/jovyan \
               -v /c/Users/shubh/Documents/cs/jupyter:/home/jovyan/work \
-              jupyter/scipy-notebook;'
+              jupyter/scipy-notebook'
