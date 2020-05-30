@@ -6,7 +6,6 @@
 [core]
 	editor = vim
 	eol = lf
-	autocrlf = true
 
 [alias]
        	hist = "!git log | head -n 11"
