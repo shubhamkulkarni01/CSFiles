@@ -129,7 +129,7 @@ fi
 # export COMPOSE_TLS_VERSION=TLSv1_2
 
 # DOCKER DESKTOP (Hyper-V VM)
-export DOCKER_HOST=tcp://localhost:2375
+# export DOCKER_HOST=tcp://localhost:2375
 
 # Set X-SERVER for any GUI apps like pygame
 export DISPLAY=localhost:0.0
