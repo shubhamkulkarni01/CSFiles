@@ -1,3 +1,4 @@
+cd ~
 ~/.print_time
 echo
 echo

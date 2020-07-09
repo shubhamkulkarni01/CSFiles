@@ -2,9 +2,9 @@ alias 'CS'='cd /c/Users/shubh/Documents/cs'
 alias 'HOME'='cd /c/Users/shubh'
 alias 'gdrive'='cd /c/Users/shubh/Google\ Drive/School/UCSD'
 
-alias 'java'='/c/Program\ Files/Java/jdk-11/bin/java.exe'
-alias 'javadoc'='/c/Program\ Files/Java/jdk-11/bin/javadoc.exe'
-alias 'javac'='/c/Program\ Files/Java/jdk-11/bin/javac.exe'
+# alias 'java'='/c/Program\ Files/Java/jdk-11/bin/java.exe'
+# alias 'javadoc'='/c/Program\ Files/Java/jdk-11/bin/javadoc.exe'
+# alias 'javac'='/c/Program\ Files/Java/jdk-11/bin/javac.exe'
 
 alias 'py'='python3.8'
 alias 'pip'='python3.8 -m pip'
