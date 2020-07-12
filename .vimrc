@@ -63,7 +63,14 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_detect_whitespace=0
 let g:airline#extensions#whitespace#enabled = 0
 
+    let g:airline_exclude_preview = 1
+
+
 imap <Leader><Leader> <Esc>
+
+if executable("ag")
+  let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+endif
 
 function! DeleteEmptyBuffers()
     let [i, n; empty] = [1, bufnr('$')]
