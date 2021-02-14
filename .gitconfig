@@ -1,0 +1,52 @@
+[user]
+	email = shubhamkulkarni01@gmail.com
+	name = Shubham Kulkarni
+[credential]
+        
+[core]
+	editor = vim
+	eol = lf
+	autocrlf = false
+
+[alias]
+       	hist = "!git log | head -n 11"
+        uncache = "rm --cached"
+        ls = "ls-files"
+        s = "status"
+        a = "add -u"
+        c = "commit"
+        amend = "commit --amend"
+        age = "rev-list --count"
+        delete = "push --delete"
+        p = "push origin HEAD"
+
+        lg = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'"
+[diff "jupyternotebook"]
+	command = git-nbdiffdriver diff
+[merge "jupyternotebook"]
+	driver = git-nbmergedriver merge %O %A %B %L %P
+	name = jupyter notebook merge driver
+[difftool "nbdime"]
+	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\" \"$BASE\"
+[difftool]
+	prompt = false
+	trustExitCode = true
+[mergetool "nbdime"]
+	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+	prompt = true
+	trustExitCode = true 
+	keepBackup = false
+	keepTemporaries = false
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[rerere]
+	enabled = true
+[hub]
+	protocol = ssh
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false

@@ -1,0 +1,12 @@
+{
+  "segments": [
+    "virtual_env",
+    "ssh",
+    "cwd",
+    "git",
+    "root"
+  ],
+  "vcs": {
+    "show_symbol": true
+  }
+}

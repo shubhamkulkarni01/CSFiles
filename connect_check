@@ -1,0 +1,8 @@
+#!/bin/bash
+value=127;
+while [[ $value -ne 0 ]];
+do
+    ping -c 1 8.8.8.8 > /dev/null 2>&1 && break;
+    value=$?
+done
+echo "Connected to network"
