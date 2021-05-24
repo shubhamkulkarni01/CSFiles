@@ -137,7 +137,7 @@ fi
 # WSL2 X-SERVER
 # export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0.0
 
-export PATH="$PATH:~/.local/bin"
+export PATH="$PATH:/home/shubhamk/tools:/home/shubhamk/tools/xpdf/bin64"
 
 # Adding powerline to make the terminal display git status
 function _update_ps1() {
@@ -148,14 +148,14 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
+echo "Loading node.js..."
+
 export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-function _load_nvm(){
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-}
 
-alias load_nvm="_load_nvm"
+echo "Loading conda..."
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -171,3 +171,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
