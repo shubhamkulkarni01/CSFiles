@@ -22,10 +22,7 @@ au BufRead,BufNewFile *.txt nmap j gj
 au BufRead,BufNewFile *.txt nmap k gk
 au BufRead,BufNewFile *.txt set wrap linebreak
 
-au BufRead,BufNewFile *.{yaml,yml} set colorcolumn=0 
-au BufRead,BufNewFile *.{yaml,yml} set shiftwidth=2  
-au BufRead,BufNewFile *.{yaml,yml} set expandtab 
-au BufRead,BufNewFile *.{yaml,yml} set softtabstop=2
+au BufRead,BufNewFile *.{yaml,yml} set colorcolumn=0 shiftwidth=2  expandtab softtabstop=2
 " save existing buffers
 " set viminfo^=%
 
@@ -96,6 +93,7 @@ endfunction
 function! OpenNetrwBuffer()
   exe 'Lexplore'
   exe 'vertical resize 40'
+  let g:netrw=1
 endfunction
 
 function! CloseNetrwBuffers()
@@ -110,6 +108,7 @@ function! CloseNetrwBuffers()
       exe 'bwipeout' join(netrw)
     endif
     call DeleteEmptyBuffers()
+    let g:netrw=0
 endfunction
 
 function! OpenMultipleFiles(...)
@@ -121,13 +120,15 @@ command! -nargs=+ Open call OpenMultipleFiles(<f-args>)
 
 autocmd VimEnter * call DeleteEmptyBuffers() 
 
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 let git_path = substitute(system("git rev-parse --show-toplevel 2>/dev/null"), '\n', '', '')
+let git_branch = substitute(system("git branch --show-current 2>/dev/null"), '\n', '', '')
 
 if git_path != "/home/shubhamk/.setup-files"
-  let git_session = git_path . "/.session"
+  let git_session = git_path . "/.session" . "." . git_branch
   if argc() == 0
-      if !empty(git_path)
+      if !empty(git_path) && !empty(git_branch)
         autocmd VimLeave * exe 'mksession! ' . git_session
       endif
       if !empty(glob(git_session))
@@ -138,15 +139,7 @@ if git_path != "/home/shubhamk/.setup-files"
   let git_vimrc = git_path . "/.vimrc"
   if !empty(glob(git_vimrc))
     sandbox exec ":source " . git_vimrc
-
-    if !empty(TEST_DIR)
-      command Test execute 'cd' git_path . TEST_DIR
-    endif
-
-    if !empty(WORK_DIR)
-      command Home execute 'cd' git_path . WORK_DIR
-      exe ':cd ' git_path . WORK_DIR
-    endif
-
   endif
 endif
+
+command CD :lcd %:p:h

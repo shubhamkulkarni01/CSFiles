@@ -19,8 +19,11 @@
         age = "rev-list --count"
         delete = "push --delete"
         p = "push origin HEAD"
+        ff = "merge --ff-only"
 
         lg = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'"
+
+        edit = "!vim $(git status --porcelain | sed s/^...//)"
 [diff "jupyternotebook"]
 	command = git-nbdiffdriver diff
 [merge "jupyternotebook"]

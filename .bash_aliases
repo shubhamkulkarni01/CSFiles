@@ -15,17 +15,17 @@ alias 'pi'='net && ssh skulkarn@pi-cluster-027.ucsd.edu'
 alias 'll'='ls -Alh'
 
 alias 'g'='git'
-# alias 'git'='hub'
+complete -o bashdefault -o default -o nospace -F __git_wrap__git_main g
 
-alias 'rstudio'='docker run --rm -d --name rstudio -e PASSWORD=password -p 8787:8787 -v /c/Users/shubh/Documents/cs/math183:/home/rstudio rocker/verse; \
-        /c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe \
-        http://localhost:8787'
+alias 'k'='kubectl'
+complete -o default -F __start_kubectl k
 
-# alias 'jupyter'='docker run --rm --name jupyter-scipy-notebook -d -p 8888:8888 \
-#               -v jupyter-scipy-notebook:/home/jovyan \
-#               -v /c/Users/shubh/Documents/cs/jupyter:/home/jovyan/work \
-#               -e JUPYTER_ENABLE_LAB=yes \
-#               jupyter/scipy-notebook && sleep 2 && docker logs jupyter-scipy-notebook'
+alias {kcreate,kc}='kubectl create'
+alias {kdelete,kd}='kubectl delete'
+alias {kjobs,kj}='kubectl get jobs'
+alias {kpods,kp}='kubectl get pods'
+alias {kdescribe,kdesc}='kubectl describe'
+alias {kexec,ke}='kubectl exec -it'
 
 alias 'fkill'='kill -9 $(jobs -p)'
 alias 'py'='python'
@@ -56,3 +56,7 @@ function _wait() {
 alias wait='_wait'
 
 alias s3api='aws s3api --endpoint-url https://s3.nautilus.optiputer.net'
+alias resnap='node_modules/.bin/jest -u'
+alias jest="./node_modules/.bin/jest"
+
+alias 'coverage'='open coverage/lcov-report/index.html'
