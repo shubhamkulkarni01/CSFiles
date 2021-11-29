@@ -1,0 +1,11 @@
+#!/bin/bash
+value=127;
+waittime=2
+echo -n connecting
+while [[ $value -ne 0 ]];
+do
+    kubectl exec -it devpod -- bash 2>/dev/null && break;
+    value=$?
+    echo -n .
+    sleep $waittime
+done

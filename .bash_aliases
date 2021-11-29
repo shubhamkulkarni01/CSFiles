@@ -60,3 +60,5 @@ alias resnap='node_modules/.bin/jest -u'
 alias jest="./node_modules/.bin/jest"
 
 alias 'coverage'='open coverage/lcov-report/index.html'
+
+alias devpod='~/.setup-files/devpod'
