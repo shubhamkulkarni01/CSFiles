@@ -137,7 +137,7 @@ fi
 # WSL2 X-SERVER
 # export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0.0
 
-export PATH="$PATH:/home/shubhamk/tools:/home/shubhamk/tools/xpdf/bin64"
+export PATH="$PATH:/home/shubhamk/tools:/home/shubhamk/tools/xpdf/bin64:/home/shubhamk/miniconda/bin/"
 
 # Adding powerline to make the terminal display git status
 function _update_ps1() {
@@ -159,15 +159,17 @@ echo "Loading conda..."
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/shubhamk/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/shubhamk/miniconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/shubhamk/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/shubhamk/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/shubhamk/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/home/shubhamk/miniconda/etc/profile.d/conda.sh"
     else
-        export PATH="/home/shubhamk/miniconda3/bin:$PATH"
+        export PATH="/home/shubhamk/miniconda/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+source <(kubectl completion bash)
