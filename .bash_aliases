@@ -65,4 +65,4 @@ alias devpod='~/.setup-files/devpod'
 
 alias battery='powercfg.exe /batteryreport /output report.html && wslview report.html && sleep 2 && rm report.html'
 
-alias cat='batcat'
+alias bat='batcat'

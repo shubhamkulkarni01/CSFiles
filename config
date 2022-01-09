@@ -1,0 +1,30 @@
+Host git github.com 
+    HostName github.com 
+    User git 
+    IdentityFile ~/.ssh/github
+
+Host gitlab gitlab-ssh.nrp-nautilus.io gitlab-ssh.nrp-nautilus.io:30622
+    HostName gitlab-ssh.nrp-nautilus.io
+    User git 
+    Port 30622 
+    IdentityFile ~/.ssh/gitlab
+
+Host home-local 
+    HostName 192.168.29.253 
+    User shubham 
+    IdentityFile ~/.ssh/id_rsa_home 
+
+Host ucsd ieng6 
+    HostName ieng6.ucsd.edu 
+    User skulkarn 
+    IdentityFile ~/.ssh/id_rsa_ieng6 
+
+Host ieng6-640 640 
+    HostName ieng6-640.ucsd.edu 
+    User skulkarn 
+    IdentityFile ~/.ssh/id_rsa_ieng6 
+
+Host dsmlp 
+    HostName dsmlp-login.ucsd.edu 
+    User skulkarn 
+    IdentityFile ~/.ssh/id_rsa_dsmlp
