@@ -173,3 +173,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 source <(kubectl completion bash)
+source /etc/bash_completion.d/*
