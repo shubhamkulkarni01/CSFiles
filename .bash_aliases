@@ -61,8 +61,9 @@ alias jest="./node_modules/.bin/jest"
 
 alias 'coverage'='open coverage/lcov-report/index.html'
 
-alias devpod='~/.setup-files/devpod'
+alias devpod='~/.setup_files/devpod'
 
 alias battery='powercfg.exe /batteryreport /output report.html && wslview report.html && sleep 2 && rm report.html'
 
 alias bat='batcat'
+alias clip='clip.exe'
