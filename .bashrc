@@ -112,7 +112,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. <(kubectl completion bash)
+if [ -x "$(command -v kubectl)" ]; then
+  . <(kubectl completion bash)
+fi
 . /etc/bash_completion.d/*
 . /usr/share/bash-completion/completions/git
 grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}' | xargs -i sudo sed -i -E "s/(.*)\tthunk/{}\tthunk/" /etc/hosts
