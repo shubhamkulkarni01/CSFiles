@@ -13,6 +13,7 @@ ln -s -f ~/.setup_files/config ~/.ssh/config
 
 mkdir -p ~/.config/powerline-shell
 ln -s -f ~/.setup_files/config.json ~/.config/powerline-shell/config.json
+ln -s -f ~/.setup_files/kubectl.py ~/.config/powerline-shell/kubectl.py
 
 curl -o miniconda.sh -L https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash ~/miniconda.sh -b -p $HOME/miniconda

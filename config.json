@@ -1,6 +1,7 @@
 {
   "segments": [
     "virtual_env",
+    "~/.config/powerline-shell/kubectl.py",
     "ssh",
     "cwd",
     "git",
