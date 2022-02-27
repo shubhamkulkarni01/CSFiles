@@ -1,7 +1,7 @@
 alias 'HOME'='cd /c/Users/shubh'
 alias 'GDRIVE'='cd /c/Users/shubh/Google\ Drive/School/UCSD'
 
-alias 'net'='~/.setup-files/connect_check'
+alias 'net'='~/.setup_files/connect_check'
 
 alias 'upload'='~/.scripts/upload'
 alias 'download'='~/.scripts/download'
