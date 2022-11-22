@@ -15,14 +15,14 @@ set nu
 set hidden
 " set clipboard=unnamed
 
-au BufRead,BufNewFile *.txt set colorcolumn=0
+au BufRead,BufNewFile *.txt setlocal colorcolumn=0
 au BufRead,BufNewFile *.txt imap <buffer> >> >>A
 au BufRead,BufNewFile *.txt imap <buffer> << <<A
-au BufRead,BufNewFile *.txt nmap j gj
-au BufRead,BufNewFile *.txt nmap k gk
-au BufRead,BufNewFile *.txt set wrap linebreak
+au BufRead,BufNewFile *.txt nmap <buffer> j gj
+au BufRead,BufNewFile *.txt nmap <buffer> k gk
+au BufRead,BufNewFile *.txt setlocal wrap linebreak
 
-au BufRead,BufNewFile *.{yaml,yml} set colorcolumn=0 shiftwidth=2  expandtab softtabstop=2
+" au BufRead,BufNewFile *.{yaml,yml} setlocal colorcolumn=0 shiftwidth=4 expandtab softtabstop=4
 " save existing buffers
 " set viminfo^=%
 

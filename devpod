@@ -1,10 +1,12 @@
 #!/bin/bash
 value=127;
 waittime=2
-echo -n connecting
+name=$(kubectl get pods -o json | jq -r '.items[].metadata |select(.labels."job-name" == "devpod") | .name')
+echo -n connecting to $name
 while [[ $value -ne 0 ]];
 do
-    kubectl exec -it devpod -- bash 2>/dev/null && break;
+    # name=$(kubectl get pods | grep "devpod--" | awk '{ print $1 }')
+    kubectl exec -it $name -- bash 2>/dev/null && break;
     value=$?
     echo -n .
     sleep $waittime

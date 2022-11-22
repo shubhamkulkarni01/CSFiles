@@ -55,7 +55,7 @@ function _wait() {
 }
 alias wait='_wait'
 
-alias s3api='aws s3api --endpoint-url https://s3.nautilus.optiputer.net'
+alias s3api='aws s3api --endpoint-url https://s3-west.nrp-nautilus.io'
 alias resnap='node_modules/.bin/jest -u'
 alias jest="./node_modules/.bin/jest"
 
