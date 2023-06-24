@@ -8,11 +8,7 @@ syntax on
 set smartindent
 set autoindent
 filetype indent on
-set shiftwidth=4
-set expandtab
-set softtabstop=4
-set nu
-set hidden
+set shiftwidth=2 softtabstop=2 expandtab nu hidden
 " set clipboard=unnamed
 
 au BufRead,BufNewFile *.txt setlocal colorcolumn=0
@@ -28,6 +24,8 @@ au BufRead,BufNewFile *.txt setlocal wrap linebreak
 
 au BufRead,BufNewFile *.js.test setfiletype javascript
 au BufRead,BufNewFile *.kt set filetype=kotlin
+
+let g:filetype_sql="pgsql"
 
 set formatoptions+=r
 

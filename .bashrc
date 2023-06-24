@@ -144,7 +144,9 @@ fi
 # WSL2 X-SERVER
 # export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0.0
 
-export PATH="$PATH:/home/shubhamk/tools:/home/shubhamk/tools/xpdf/bin64:/home/shubhamk/miniconda/bin/"
+export PATH="$PATH:/home/shubhamk/tools:/home/shubhamk/tools/xpdf/bin64"
+export PATH="$PATH:/home/shubhamk/miniconda/bin/"
+export PATH="$PATH:/usr/local/go/bin:/home/shubhamk/go/bin"
 
 # Adding powerline to make the terminal display git status
 function _update_ps1() {
@@ -178,3 +180,13 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+. "$HOME/.cargo/env"
+
+eval `ssh-agent`
+ssh-add ~/.ssh/caida
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/shubhamk/tools/google-cloud-sdk/path.bash.inc' ]; then . '/home/shubhamk/tools/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/shubhamk/tools/google-cloud-sdk/completion.bash.inc' ]; then . '/home/shubhamk/tools/google-cloud-sdk/completion.bash.inc'; fi
